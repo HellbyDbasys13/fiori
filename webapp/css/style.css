@@ -1,1 +1,6 @@
 /* Enter your custom styles here */
+
+#userIcon{
+    border-radius: 50%; 
+    margin-left: 10px;
+}

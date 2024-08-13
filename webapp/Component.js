@@ -1,35 +1,31 @@
-/**
- * eslint-disable @sap/ui5-jsdocs/no-jsdoc
- */
-
 sap.ui.define([
-        "sap/ui/core/UIComponent",
-        "sap/ui/Device",
-        "siar/model/models"
-    ],
-    function (UIComponent, Device, models) {
-        "use strict";
+    "sap/ui/core/UIComponent",
+    "sap/ui/model/json/JSONModel"
+], function (UIComponent, JSONModel) {
+    "use strict";
 
-        return UIComponent.extend("siar.Component", {
-            metadata: {
-                manifest: "json"
-            },
+    return UIComponent.extend("siar.Component", {
 
-            /**
-             * The component is initialized by UI5 automatically during the startup of the app and calls the init method once.
-             * @public
-             * @override
-             */
-            init: function () {
-                // call the base component's init function
-                UIComponent.prototype.init.apply(this, arguments);
+        metadata: {
+            manifest: "json"
+        },
 
-                // enable routing
-                this.getRouter().initialize();
+        init: function () {
+            // Llamar al init de la clase base
+            UIComponent.prototype.init.apply(this, arguments);
+            
+            // Establecer la vista raíz
+            this.getRouter().initialize();
+        },
 
-                // set the device model
-                this.setModel(models.createDeviceModel(), "device");
-            }
-        });
-    }
-);
+        createContent: function () {
+            var oView = sap.ui.view({
+                id: "app",
+                viewName: "siar.view.MasterPage",
+                type: "XML",
+                async: true
+            });
+            return oView;
+        }
+    });
+});

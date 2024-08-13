@@ -1,31 +1,19 @@
 sap.ui.define([
     "sap/ui/core/UIComponent",
-    "sap/ui/model/json/JSONModel"
-], function (UIComponent, JSONModel) {
+    "sap/ui/Device",
+    "siar/model/models"
+], function (UIComponent, Device, models) {
     "use strict";
 
     return UIComponent.extend("siar.Component", {
-
         metadata: {
             manifest: "json"
         },
 
         init: function () {
-            // Llamar al init de la clase base
+            // Inicializar la aplicación
             UIComponent.prototype.init.apply(this, arguments);
-            
-            // Establecer la vista raíz
-            this.getRouter().initialize();
-        },
-
-        createContent: function () {
-            var oView = sap.ui.view({
-                id: "app",
-                viewName: "siar.view.MasterPage",
-                type: "XML",
-                async: true
-            });
-            return oView;
+            this.setModel(models.createDeviceModel(), "device");
         }
     });
 });

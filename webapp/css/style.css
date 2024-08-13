@@ -1,6 +1,24 @@
-/* Enter your custom styles here */
-
-#userIcon{
-    border-radius: 50%; 
-    margin-left: 10px;
+.navicon {
+    /* padding: 10px; */
 }
+
+.sapMPageHeader>div:first-of-type {
+    /* background-color: blue; */
+    height: 70px !important;
+}
+
+.navtitle {
+    /* background-color: red; */
+    height: 70px !important;
+    padding-top: 20px !important;
+}
+
+
+.navtitle  span{
+    font-size: 25px;
+    padding-left: 10px;
+}
+/* 
+.customContent{
+    padding-top: 71px;
+} */

@@ -1,0 +1,48 @@
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    controllerName="siar.controller.MasterPage">
+
+    <SplitApp id="splitApp">
+        <!-- Menú lateral -->
+        <masterPages>
+            <Page id="menuPage" title="Menú">
+                <List id="menuList" items="{/menuItems}">
+                    <StandardListItem title="{title}" icon="{icon}" type="Navigation" press="onMenuItemPress"/>
+                </List>
+            </Page>
+        </masterPages>
+
+        <!-- Páginas de contenido -->
+        <detailPages>
+            <Page id="homePage" showHeader="true">
+                <headerContent>
+                    <core:Fragment fragmentName="siar.view.fragments.mastepage.Header" type="XML"/>
+                </headerContent>
+                <content>
+                    <core:Fragment fragmentName="siar.view.fragments.Home" type="XML" />
+                </content>
+            </Page>
+            
+            <Page id="detailPage" title="Detail" showHeader="true">
+                <headerContent>
+                    <Text text="Detail" />
+                </headerContent>
+                <content>
+                    <core:Fragment fragmentName="siar.view.fragments.Detail" type="XML" />
+                </content>
+            </Page>
+            
+            <Page id="userPage" title="User" showHeader="true">
+                <headerContent>
+                    <Text text="User" />
+                </headerContent>
+                <content>
+                    <core:Fragment fragmentName="siar.view.fragments.User" type="XML" />
+                </content>
+            </Page>
+        </detailPages>
+    </SplitApp>
+    
+</mvc:View>

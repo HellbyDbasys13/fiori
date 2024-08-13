@@ -6,37 +6,6 @@
         <pages>
             <Page>
                 <customHeader>
-                    <Toolbar>
-                        <!-- Icono antes del nombre de la página -->
-                        <Image
-                            src="https://cdn-icons-png.flaticon.com/512/6171/6171586.png"
-                            width="50px"
-                            alt="Home Icon"
-                            decorative="false" />
-                        <Title text="SIAR - Sistema de administracion de riesgos" class="navtitle" />
-
-                        <!-- Espaciador para empujar el contenido siguiente a la derecha -->
-                        <ToolbarSpacer />
-
-                        <!-- Imagen de notificación -->
-                        <Image
-                            src="https://static.vecteezy.com/system/resources/previews/017/257/837/non_2x/notification-golden-bell-cartoon-free-png.png"
-                            press="onNotificationIconPress"
-                            width="25px"
-                            alt="Notificaciones"
-                            class="navicon"
-                            decorative="false" />
-
-                        <!-- Imagen de usuario -->
-                        <Image
-                            id="userIcon"
-                            src="https://static.vecteezy.com/system/resources/previews/019/879/186/non_2x/user-icon-on-transparent-background-free-png.png"
-                            press="onUserIconPress"
-                            width="60px"
-                            alt="Usuario"
-                            class="navicon"
-                            decorative="false" />
-                    </Toolbar>
                 </customHeader>
                 <content>
                     <Button

@@ -2,15 +2,6 @@
     padding: 10px;
 }
 
-/* 
-.sapMPageHeader{
-    padding-top: 20px;
-} */
-
-/* .sapMPageHeader {
-    box-shadow: none;
-} */
-
 .sapMPageHeader .customHeader {
     background: #ffd913;
     position: relative !important;
@@ -38,19 +29,12 @@
     height: 55px;
 }
 
-/* .customSlipApp div:nth-of-type(2) header div:first-of-type div:nth-of-type(2) {
-    
-    height: 50px !important;
-} */
-
 .customSlipApp div:nth-of-type(2) div section {
     background-color: #4a5464;
 }
 
 .customSlipApp div:nth-of-type(2) div header div div:nth-of-type(2) div {
     height: 54px !important;
-    /* padding-top: 0.25rem; */
-    /* padding-bottom: 0.25rem; */
 }
 
 .customSlipApp div:nth-of-type(2) div header div div:nth-of-type(2) div div {

@@ -1,24 +1,120 @@
-.navicon {
-    /* padding: 10px; */
+body{
+    color:#a29fa3
 }
 
-.sapMPageHeader>div:first-of-type {
-    /* background-color: blue; */
+.navicon {
+    padding: 10px;
+}
+
+/* 
+.sapMPageHeader{
+    padding-top: 20px;
+} */
+
+/* .sapMPageHeader {
+    box-shadow: none;
+} */
+
+.sapMPageHeader .customHeader{
+    background: #ffd913;
+    position: relative !important;
     height: 70px !important;
 }
 
 .navtitle {
-    /* background-color: red; */
     height: 70px !important;
-    padding-top: 20px !important;
+    padding-top: 25px !important;
 }
 
-
-.navtitle  span{
+.navtitle span {
     font-size: 25px;
     padding-left: 10px;
 }
-/* 
-.customContent{
-    padding-top: 71px;
+
+.customSlipApp {
+    position: relative !important;
+    margin-top: 30px;
+    height: 96%;
+}
+
+.customSlipApp div:nth-of-type(2) header div:first-of-type {
+    background: #a29fa3;
+}
+
+/* .customSlipApp div:nth-of-type(2) header div:first-of-type div:nth-of-type(2) {
+    
+    height: 50px !important;
 } */
+
+.customSlipApp div:nth-of-type(2) div section {
+    background-color: #a29fa3;
+}
+
+.customSlipApp div:nth-of-type(3) header div:first-of-type {
+    background: #a29fa3;
+    height: 41px;
+}
+
+.customSlipApp div:nth-of-type(3) header div:first-of-type div:nth-of-type(3) {
+    background: red;
+    display: none;
+}
+
+.customListMenu {
+    left: 10px;
+    width: 92% !important;
+    top:3px;
+}
+
+.sapMSplitContainerMaster{
+    border-right:none;
+}
+
+.customContent{
+    margin: 15px;
+}
+
+.demo{
+    border-top: solid;
+    border-left: solid;
+    border-right: solid;
+    width: 94%;
+    margin: 17px 0px 0px 7px;
+    border-radius: 10px;
+    border-color: #fff;
+    color: #fff;
+}
+
+.size1 {
+	font-size : 1.5rem;
+}
+.size2 {
+	font-size : 2.5rem;
+}
+.size3 {
+	font-size : 5rem;
+}
+.size4 {
+	font-size : 7.5rem;
+}
+.size5 {
+	font-size : 10rem;
+}
+
+@media (max-width:599px) {
+	.size1 {
+		font-size : 1rem;
+	}
+	.size2 {
+		font-size : 2rem;
+	}
+	.size3 {
+		font-size : 3rem;
+	}
+	.size4 {
+		font-size : 4rem;
+	}
+	.size5 {
+		font-size : 5rem;
+	}
+}

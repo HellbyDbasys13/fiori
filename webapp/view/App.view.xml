@@ -32,7 +32,7 @@
                                 </content>
                             </Page>
                             
-                            <Page id="detailPage" title="Detail">
+                            <Page id="detailPage" title="Home > Detail">
                                 <headerContent>
                                     <Text text="Detail"/>
                                 </headerContent>

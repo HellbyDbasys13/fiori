@@ -6,16 +6,9 @@
 
 .customPage {}
 
-.customPage header:first-of-type {
-    /* height: 70px; */
-}
-
-/* .customPage header:first-of-type div:first-of-type {
-    border: none !important;
-} */
+.customPage header:first-of-type {}
 
 .customHeader {
-    /* position: relative !important; */
     height: 89px !important;
     border-bottom: 10px solid !important;
     border-bottom-color: #fcdc14 !important;
@@ -70,89 +63,25 @@
     font-size: 29px !important;
 }
 
+.iconUserMenu{
+    width: 300px;
+}
+
+.iconUserMenu li{
+    height: 40px !important;
+    font-size: 15px;
+    /* margin-left: 10px !important; */
+}
+
+.iconUserMenu li div{
+    margin-left: 10px !important;
+}
+
 @media (max-width:599px) {
     .navtitle {
         display: none;
     }
 }
-
-/* 
-
-
-.navtitle span {
-    font-size: 25px;
-    padding-left: 10px;
-}
-
-
-
-.customSlipApp div:nth-of-type(2) header div:first-of-type {
-    background: #2b3138;
-    height: 55px;
-}
-
-.customSlipApp div:nth-of-type(2) div section {
-    background-color: #4a5464;
-}
-
-.customSlipApp div:nth-of-type(2) div header div div:nth-of-type(2) div {
-    height: 54px !important;
-}
-
-.customSlipApp div:nth-of-type(2) div header div div:nth-of-type(2) div div {
-    border-top: solid;
-    border-left: solid;
-    border-right: solid;
-    width: 91%;
-    margin: 15px 0px 0px 13px !important;
-    border-radius: 5px 5px 0px 0px;
-    border-color: #738494;
-    background: #738494;
-    height: 35px !important;
-}
-
-
-.customSlipApp div:nth-of-type(3) header div:first-of-type {
-    background: #2b3138;
-    height: 55px;
-    color: #738494;
-}
-
-.customSlipApp div:nth-of-type(3) header div:first-of-type span {
-    padding-left: 15px;
-    margin-top: 13px;
-    position: fixed;
-    font-size: 20px;
-}
-
-.customSlipApp div:nth-of-type(3) header div:first-of-type div:nth-of-type(3) {
-    background: red;
-    display: none;
-}
-
-.customListMenu {
-    left: 15px;
-    width: 90% !important;
-    top: 15px;
-}
-
-.customListMenu li{
-    background: #363f4b;
-    border-bottom: 1px solid #738494;
-    height: 40px !important;
-}
-
-.customListMenu li div div div{
-    color: #738494;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.sapMSplitContainerMaster {
-    border-right: none;
-} */
-
-
 
 .size1 {
     font-size: 1.5rem;

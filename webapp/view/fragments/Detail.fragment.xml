@@ -1,6 +1,319 @@
 <core:FragmentDefinition
     xmlns="sap.m"
-    xmlns:core="sap.ui.core">
-    <Text text="Contenido de la página Detail" />
+    xmlns:core="sap.ui.core"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+	xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:tnt="sap.tnt"
+    >
+
+            <Panel width="auto" class="sapUiResponsiveMargin">
+                <content>
+                    <Title level="H1" text="Seguro GMM" />
+                    <FlexBox direction="Column" alignItems="End" class="sapUiMediumMargin">
+                        <FlexBox direction="Row" alignItems="Start" class="sapUiTinyMarginBottom">
+                            <Text text="Póliza No:" class="sapUiTinyMarginEnd"/>
+                            <tnt:InfoLabel id="il1" text="000000000" renderMode="Narrow" colorScheme=""/>
+                        </FlexBox>
+                        <FlexBox direction="Row" alignItems="Start" class="sapUiTinyMarginBottom">
+                            <Text text="Certificado No:" class="sapUiTinyMarginEnd"/>
+                            <tnt:InfoLabel id="il2" text="000000000XXXX" renderMode="Narrow" colorScheme=""/>
+                        </FlexBox>
+                    </FlexBox>
+                </content>
+            </Panel>
+
+            <Title level="H3" text="Datos del asegurado" />
+            <Panel width="auto" class="sapUiResponsiveMargin">
+                <content>
+                    <HBox alignItems="Center" justifyContent="SpaceBetween" width="100%">
+                        <Label
+                            id="labelSimpleInput"
+                            text="Simple Input"
+                            class="control-lbl"
+                        />
+                        <Input
+                            id="txtNombre"
+                            placeholder="Nombre(s)"
+                            liveChange=".onSimpleInputChange"
+                            class="control control-input"
+                            width="100%"
+                        />
+                        <Input
+                            id="txtPaterno"
+                            placeholder="Apellido Paterno"
+                            liveChange=".onSimpleInputChange"
+                            class="control control-input"
+                            width="100%"
+                        />
+                        <Input
+                            id="txtMaterno"
+                            placeholder="Apellido Materno"
+                            liveChange=".onSimpleInputChange"
+                            class="control control-input"
+                            width="100%"
+                        />
+                    </HBox>
+                    
+                    <HBox alignItems="Center" justifyContent="Start" width="100%">
+                        <Label
+                            id="lblDir"
+                            text="Simple Input"
+                            class="control-lbl"
+                        />
+                        <TextArea
+                            id="txtDireccion"
+                            placeholder="Direccion"
+                            rows="4"
+                            liveChange=".onTextAreaChange"
+                            class="control control-txta"
+                        />
+                    </HBox>
+                    
+                </content>
+            </Panel>
+
+            <Title level="H3" text="Beneficiarios" />
+            <Panel width="auto" class="sapUiResponsiveMargin">
+                <!-- <headerToolbar>
+                    <OverflowToolbar>
+                        <Title text="Header"/>
+                        <ToolbarSpacer />
+                        <Button icon="sap-icon://settings" />
+                        <Button icon="sap-icon://drop-down-list" />
+                    </OverflowToolbar>
+                </headerToolbar> -->
+                <content>
+                    <Label
+                        id="labelInputWithValue1"
+                        text="Input with Value"
+                        class="control-lbl"
+                    />
+                    <Input
+                        id="inputWithValue2"
+                        value="Predefined Value"
+                        liveChange=".onInputWithValueChange"
+                        class="control control-input"
+                    />
+
+                    <Label
+                        id="labelInputWithValue3"
+                        text="Input with Value"
+                        class="control-lbl"
+                    />
+                    <Input
+                        id="inputWithValue4"
+                        value="Predefined Value"
+                        liveChange=".onInputWithValueChange"
+                        class="control control-input"
+                    />
+
+                    <Label
+                        id="labelInputWithValue"
+                        text="Input with Value"
+                        class="control-lbl"
+                    />
+                    <Input
+                        id="inputWithValue"
+                        value="Predefined Value"
+                        liveChange=".onInputWithValueChange"
+                        class="control control-input"
+                    />
+                </content>
+            </Panel>
+
+            
+
+            <!-- <Label
+                id="labelInputWithValue"
+                text="Input with Value"
+                class="control-lbl"
+            />
+            <Input
+                id="inputWithValue"
+                value="Predefined Value"
+                liveChange=".onInputWithValueChange"
+                class="control control-input"
+            />
+
+            <Label
+                id="labelInputWithValueState"
+                text="Input with Value State"
+                class="control-lbl"
+            />
+            <Input
+                id="inputWithValueState"
+                value="Error Value"
+                valueState="Error"
+                valueStateText="Invalid input"
+                liveChange=".onInputWithValueStateChange"
+                class="control control-input"
+            />
+
+            <Label
+                id="labelPasswordInput"
+                text="Password Input"
+                class="control-lbl"
+            />
+            <Input
+                id="passwordInput"
+                type="Password"
+                placeholder="Enter password..."
+                liveChange=".onPasswordInputChange"
+                class="control control-input"
+            />
+
+            <Label
+                id="labelNumberInput"
+                text="Number Input"
+                class="control-lbl"
+            />
+            <Input
+                id="numberInput"
+                type="Number"
+                placeholder="Enter number..."
+                liveChange=".onNumberInputChange"
+                class="control control-input"
+            />
+
+            <Label
+                id="labelDatePicker"
+                text="Date Input"
+                class="control-lbl"
+            />
+            <DatePicker
+                id="datePicker"
+                placeholder="Select date..."
+                change=".onDatePickerChange"
+                class="control control-input"
+            />
+
+            <Label
+                id="labelTimePicker"
+                text="Time Input"
+                class="control-lbl"
+            />
+            <TimePicker
+                id="timePicker"
+                placeholder="Select time..."
+                change=".onTimePickerChange"
+                class="control control-input"
+            />
+
+            <Label
+                id="labelDateTimePicker"
+                text="DateTime Input"
+                class="control-lbl"
+            />
+            <DateTimePicker
+                id="dateTimePicker"
+                placeholder="Select date and time..."
+                change=".onDateTimePickerChange"
+                class="control control-input"
+            />
+
+            <Label
+                id="labelSelectInput"
+                text="Select Input"
+                class="control-lbl"
+            />
+            <Select
+                id="selectInput"
+                change=".onSelectChange"
+                class="control control-input"
+            >
+            </Select>
+
+            <Label
+                id="labelMultiInput"
+                text="Multi-Input"
+                class="control-lbl"
+            />
+            <MultiInput
+                id="multiInput1"
+                showSuggestion="false"
+                width="70%"
+                showValueHelp="false"
+                class="control control-input"
+            />
+
+            <Label
+                id="labelTextArea"
+                text="Text Area"
+                class="control-lbl"
+            />
+            <TextArea
+                id="textArea"
+                placeholder="Enter text..."
+                rows="4"
+                liveChange=".onTextAreaChange"
+                class="control control-txta"
+            />
+
+            <Label
+                id="labelCheckBox"
+                text="CheckBox"
+                class="control-lbl"
+            />
+            <CheckBox
+                id="checkBox"
+                text="Accept terms and conditions"
+                select=".onCheckBoxSelect"
+                class="control control-chk"
+            />
+
+            <Label
+                id="labelRadioButtonGroup"
+                text="Radio Button Group"
+                class="control-lbl"
+            />
+            <RadioButtonGroup
+                id="radioButtonGroup"
+                columns="3"
+                select=".onRadioButtonSelect"
+                class="control control-input"
+            >
+                <RadioButton
+                    id="radioButton1"
+                    text="Option 1"
+                />
+                <RadioButton
+                    id="radioButton2"
+                    text="Option 2"
+                />
+                <RadioButton
+                    id="radioButton3"
+                    text="Option 3"
+                />
+            </RadioButtonGroup>
+
+            <Label
+                id="labelSlider"
+                text="Slider"
+                class="control-lbl"
+            />
+            <Slider
+                id="slider"
+                min="0"
+                max="100"
+                value="50"
+                change=".onSliderChange"
+            />
+
+            <Label
+                id="labelSwitch"
+                text="Switch"
+                class="control-lbl"
+            />
+            <Switch
+                id="switch"
+                state="true"
+                customTextOn="Yes"
+                customTextOff="No"
+                change=".onSwitchChange"
+            /> -->
+        <!-- </content> -->
 </core:FragmentDefinition>
+
 

@@ -3,42 +3,32 @@ sap.ui.define([
 	'sap/ui/core/Fragment',
 	'sap/m/MessageToast',
 	"sap/m/MenuItem",
-	"sap/ui/model/json/JSONModel"
-], function (Controller, Fragment, MessageToast, MenuItem, JSONModel) {
+	"sap/ui/model/json/JSONModel",
+	"../services/menu" // Importa el módulo menu.js
+], function (Controller, Fragment, MessageToast, MenuItem, JSONModel, menu) {
 	"use strict";
 
 	return Controller.extend("siar.controller.App", {
 		onInit: function () {
-			// Crear el modelo para el menú lateral
-			var oModel = new JSONModel({
-				menuItems: [
-					{ title: "Inicio", icon: "sap-icon://home" },
-					{ title: "Mis polizas", icon: "sap-icon://request" },
-					{ title: "Salir", icon: "sap-icon://close-command-field" }
-				]
-			});
-			this.getView().setModel(oModel);
+			menu.get().then((response) => {
+				console.log(response)
+				this.getView().setModel(new JSONModel({
+					menuItems: response
+				}));
+			})
 		},
 
 		onMenuItemPress: function (oEvent) {
-			var sItemTitle = oEvent.getSource().getTitle();
-			var oSplitApp = this.byId("splitApp");
-			switch (sItemTitle) {
-				case "Inicio":
-					oSplitApp.toDetail(this.createId("homePage"));
-					break;
-				case "Mis polizas":
-					oSplitApp.toDetail(this.createId("userPage"));
-					break;
-					break;
-				default:
-					oSplitApp.toDetail(this.createId("homePage"));
-					break;
-			}
+			let oSplitApp = this.byId("splitApp");
+			let idItemMenu = oEvent.getSource().getId().split('-').pop();
+			const menuModel = this.getView().getModel().oData?.menuItems
+			const { page, url } = menuModel.find((obj, index) => index == idItemMenu)
+			if (url)
+				window.location.href = url;
+			else
+				oSplitApp.toDetail(this.createId(page));
 		},
-		onShowHello: function () {
-			sap.m.MessageToast.show("¡Hola Mundo!");
-		},
+
 		onUserIconPress: function () {
 			var oView = this.getView(),
 				oButton = oView.byId("userIcon");
@@ -57,18 +47,16 @@ sap.ui.define([
 				this._oMenuFragment.openBy(oButton);
 			}
 		},
+
 		onMenuAction: function (oEvent) {
-			var oItem = oEvent.getParameter("item"),
-				sItemPath = "";
+			let oItem = oEvent.getParameter("item").getText()
+			const menuModel = this.getView().getModel().oData?.menuItems
+			if(oItem!='Salir'){
 
-			while (oItem instanceof MenuItem) {
-				sItemPath = oItem.getText() + " > " + sItemPath;
-				oItem = oItem.getParent();
+			}else{
+				const { page, url } = menuModel.pop()
+				window.location.href = url;
 			}
-
-			sItemPath = sItemPath.substr(0, sItemPath.lastIndexOf(" > "));
-
-			MessageToast.show("Action triggered on item: " + sItemPath);
 		}
 	});
 });

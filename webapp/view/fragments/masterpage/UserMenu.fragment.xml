@@ -1,7 +1,7 @@
 <core:FragmentDefinition
 		xmlns="sap.m"
 		xmlns:core="sap.ui.core">
-		<Menu itemSelected="onMenuAction">
+		<Menu itemSelected="onMenuAction" class="iconUserMenu">
 			<MenuItem text="Mi Perfil"/>
 			<MenuItem text="Salir"/>
 		</Menu>

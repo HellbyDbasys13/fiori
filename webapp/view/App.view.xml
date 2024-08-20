@@ -5,14 +5,14 @@
     xmlns="sap.m">
     <App>
         <pages>
-            <Page>
-                <customHeader>
+            <Page class="customPage">
+                <customHeader >
                     <core:Fragment fragmentName="siar.view.fragments.masterpage.Toolbar" type="XML" class="customHeader"/>
                 </customHeader>
                 <content>
                     <SplitApp id="splitApp" class="customSlipApp">
                         <masterPages>
-                            <Page id="menuPage" title="Menú">
+                            <Page id="menuPage">
                                 <List id="menuList" items="{/menuItems}" class="customListMenu">
                                     <StandardListItem title="{title}" icon="{icon}" type="Navigation" press="onMenuItemPress"/>
                                 </List>

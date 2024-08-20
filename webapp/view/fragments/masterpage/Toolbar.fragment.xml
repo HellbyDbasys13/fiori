@@ -5,11 +5,12 @@
         <Toolbar>
                         <!-- Icono antes del nombre de la página -->
                         <Image
-                            src="https://cdn-icons-png.flaticon.com/512/6171/6171586.png"
-                            width="50px"
+                            src="https://www.gruposalinas.com/Content/iconos/LogoGS-main.svg"
                             alt="Home Icon"
-                            decorative="false" />
-                        <Title text="SIAR - Sistema de administracion de riesgos" class="navtitle" />
+                            decorative="false"
+                            width="70px"
+                            class="size1 navicon" />
+                        <Title text="SISTEMA INTEGRAL DE ADMINISTRACIÓN DE RIESGOS" class="navtitle"/>
 
                         <!-- Espaciador para empujar el contenido siguiente a la derecha -->
                         <ToolbarSpacer />
@@ -18,7 +19,6 @@
                         <core:Icon
                                 src="sap-icon://bell"
                                 class="size1 navicon"
-                                color="#04000d"
                                  >
                                 <core:layoutData>
                                     <FlexItemData growFactor="1" />
@@ -28,7 +28,6 @@
                         <core:Icon
                                 src="sap-icon://message-popup"
                                 class="size1 navicon"
-                                color="#04000d"
                                  >
                                 <core:layoutData>
                                     <FlexItemData growFactor="1" />
@@ -40,7 +39,6 @@
                                 id="userIcon"
                                 src="sap-icon://customer"
                                 class="size2 navicon"
-                                color="#04000d"
                                 press="onUserIconPress" >
                                 <core:layoutData>
                                     <FlexItemData growFactor="1" />

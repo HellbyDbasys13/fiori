@@ -1,28 +1,90 @@
 .navicon {
     padding: 10px;
+    font-weight: normal;
 }
 
-.sapMPageHeader .customHeader {
-    background: #ffd913;
-    position: relative !important;
-    height: 71px !important;
+
+.customPage {}
+
+.customPage header:first-of-type {
+    /* height: 70px; */
+}
+
+/* .customPage header:first-of-type div:first-of-type {
+    border: none !important;
+} */
+
+.customHeader {
+    /* position: relative !important; */
+    height: 89px !important;
+    border-bottom: 10px solid !important;
+    border-bottom-color: #fcdc14 !important;
+}
+
+.customSlipApp {
+    margin-top: 49px;
+    height: 90%;
+}
+
+.customSlipApp div:nth-of-type(2) header div:first-of-type {
+    background: #ececec;
+    /* height: 55px; */
+}
+
+.customSlipApp div:nth-of-type(2) div section {
+    background-color: #ececec;
+}
+
+.customListMenu li {
+    background: #ececec;
+    border-bottom: 1px solid #b6babe;
+    height: 40px !important;
+}
+
+.customSlipApp div:nth-of-type(3) header div:first-of-type {
+    background: #f4f8f8;
+}
+
+.customContent {
+    margin-left: 50px;
+    background: #f4f8f8;
+}
+
+.customSlipApp div:nth-of-type(3) header div:first-of-type {
+    border: none;
+}
+
+.customSlipApp div:nth-of-type(3) header div:first-of-type div:nth-of-type(3) {
+    display: none;
+}
+
+.customSlipApp div:nth-of-type(3) header div:first-of-type div:nth-of-type(2) {
+    display: none;
 }
 
 .navtitle {
-    height: 70px !important;
-    padding-top: 25px !important;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 29px !important;
 }
+
+@media (max-width:599px) {
+    .navtitle {
+        display: none;
+    }
+}
+
+/* 
+
 
 .navtitle span {
     font-size: 25px;
     padding-left: 10px;
 }
 
-.customSlipApp {
-    position: relative !important;
-    margin-top: 30px;
-    height: 96%;
-}
+
 
 .customSlipApp div:nth-of-type(2) header div:first-of-type {
     background: #2b3138;
@@ -88,11 +150,9 @@
 
 .sapMSplitContainerMaster {
     border-right: none;
-}
+} */
 
-.customContent {
-    margin: 15px;
-}
+
 
 .size1 {
     font-size: 1.5rem;

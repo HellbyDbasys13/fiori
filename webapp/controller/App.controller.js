@@ -12,9 +12,9 @@ sap.ui.define([
 			// Crear el modelo para el menú lateral
 			var oModel = new JSONModel({
 				menuItems: [
-					{ title: "Home", icon: "sap-icon://home" },
-					{ title: "Detail", icon: "sap-icon://detail-view" },
-					{ title: "User", icon: "sap-icon://person-placeholder" }
+					{ title: "Inicio", icon: "sap-icon://home" },
+					{ title: "Mis polizas", icon: "sap-icon://request" },
+					{ title: "Salir", icon: "sap-icon://close-command-field" }
 				]
 			});
 			this.getView().setModel(oModel);
@@ -24,14 +24,12 @@ sap.ui.define([
 			var sItemTitle = oEvent.getSource().getTitle();
 			var oSplitApp = this.byId("splitApp");
 			switch (sItemTitle) {
-				case "Home":
+				case "Inicio":
 					oSplitApp.toDetail(this.createId("homePage"));
 					break;
-				case "Detail":
-					oSplitApp.toDetail(this.createId("detailPage"));
-					break;
-				case "User":
+				case "Mis polizas":
 					oSplitApp.toDetail(this.createId("userPage"));
+					break;
 					break;
 				default:
 					oSplitApp.toDetail(this.createId("homePage"));

@@ -39,8 +39,11 @@
 }
 
 .customContent {
-    margin-left: 50px;
     background: #f4f8f8;
+}
+
+.customContent div{
+    width: 100%;
 }
 
 .customSlipApp div:nth-of-type(3) header div:first-of-type {
@@ -75,6 +78,20 @@
 
 .iconUserMenu li div{
     margin-left: 10px !important;
+}
+
+.customH{
+    padding-left: 20px;
+}
+
+.control{
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+}
+
+.control-lbl{
+    padding-left: 10px;   
 }
 
 @media (max-width:599px) {

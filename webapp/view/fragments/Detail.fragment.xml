@@ -11,20 +11,10 @@
             <Panel width="auto" class="sapUiResponsiveMargin">
                 <content>
                     <Title level="H1" text="Seguro GMM" />
-                    <FlexBox direction="Column" alignItems="End" class="sapUiMediumMargin">
-                        <FlexBox direction="Row" alignItems="Start" class="sapUiTinyMarginBottom">
-                            <Text text="Póliza No:" class="sapUiTinyMarginEnd"/>
-                            <tnt:InfoLabel id="il1" text="000000000" renderMode="Narrow" colorScheme=""/>
-                        </FlexBox>
-                        <FlexBox direction="Row" alignItems="Start" class="sapUiTinyMarginBottom">
-                            <Text text="Certificado No:" class="sapUiTinyMarginEnd"/>
-                            <tnt:InfoLabel id="il2" text="000000000XXXX" renderMode="Narrow" colorScheme=""/>
-                        </FlexBox>
-                    </FlexBox>
                 </content>
             </Panel>
 
-            <Title level="H3" text="Datos del asegurado" />
+            <Title level="H3" text="Datos del asegurado" class="customH" />
             <Panel width="auto" class="sapUiResponsiveMargin">
                 <content>
                     <HBox alignItems="Center" justifyContent="SpaceBetween" width="100%">
@@ -55,71 +45,66 @@
                             width="100%"
                         />
                     </HBox>
-                    
-                    <HBox alignItems="Center" justifyContent="Start" width="100%">
+                    <HBox alignItems="Center" justifyContent="Inherit" width="100%">
                         <Label
-                            id="lblDir"
                             text="Simple Input"
                             class="control-lbl"
                         />
-                        <TextArea
+                        <Input
                             id="txtDireccion"
                             placeholder="Direccion"
-                            rows="4"
-                            liveChange=".onTextAreaChange"
-                            class="control control-txta"
+                            liveChange=".onSimpleInputChange"
+                            class="control control-input"
+                            width="100%"
                         />
                     </HBox>
-                    
                 </content>
             </Panel>
 
-            <Title level="H3" text="Beneficiarios" />
+            <Title level="H3" text="Beneficiarios" class="customH"/>
             <Panel width="auto" class="sapUiResponsiveMargin">
-                <!-- <headerToolbar>
-                    <OverflowToolbar>
-                        <Title text="Header"/>
-                        <ToolbarSpacer />
-                        <Button icon="sap-icon://settings" />
-                        <Button icon="sap-icon://drop-down-list" />
-                    </OverflowToolbar>
-                </headerToolbar> -->
                 <content>
-                    <Label
-                        id="labelInputWithValue1"
-                        text="Input with Value"
-                        class="control-lbl"
-                    />
-                    <Input
-                        id="inputWithValue2"
-                        value="Predefined Value"
-                        liveChange=".onInputWithValueChange"
-                        class="control control-input"
-                    />
-
-                    <Label
-                        id="labelInputWithValue3"
-                        text="Input with Value"
-                        class="control-lbl"
-                    />
-                    <Input
-                        id="inputWithValue4"
-                        value="Predefined Value"
-                        liveChange=".onInputWithValueChange"
-                        class="control control-input"
-                    />
-
-                    <Label
-                        id="labelInputWithValue"
-                        text="Input with Value"
-                        class="control-lbl"
-                    />
-                    <Input
-                        id="inputWithValue"
-                        value="Predefined Value"
-                        liveChange=".onInputWithValueChange"
-                        class="control control-input"
-                    />
+                    <HBox>
+                        <VBox>
+                            <Label
+                                id="labelInputWithValue1"
+                                text="Input with Value"
+                                class="control-lbl"
+                            />
+                            <Input
+                                id="inputWithValue1"
+                                value="Predefined Value"
+                                liveChange=".onInputWithValueChange"
+                                class="control control-input"
+                            />
+                        </VBox>
+                        <VBox>
+                            <Label
+                                id="labelInputWithValue2"
+                                text="Input with Value"
+                                class="control-lbl"
+                            />
+                            <Input
+                                id="inputWithValue2"
+                                value="Predefined Value"
+                                liveChange=".onInputWithValueChange"
+                                class="control control-input"
+                            />
+                        </VBox>
+                        <VBox>
+                            <Label
+                                id="labelInputWithValue3"
+                                text="Input with Value"
+                                class="control-lbl"
+                            />
+                            <TextArea
+                                id="inputWithValue3"
+                                value="Predefined Value"
+                                liveChange=".onInputWithValueChange"
+                                class="control control-input"
+                            />
+                        </VBox>
+                    </HBox>
                 </content>
             </Panel>
 

@@ -28,10 +28,15 @@
     background-color: #ececec;
 }
 
-.customListMenu li {
-    background: #ececec;
-    border-bottom: 1px solid #b6babe;
-    height: 40px !important;
+.customListMenu{
+    background: #ececec !important;
+    box-shadow: none !important;
+}
+
+sapUiSizeCompact .sapTntNLMenu.sapUiMnu li.sapUiMnuItm, .sapUiSizeCompact .sapTntNLI {
+    height: 3rem !important;
+    background: #ececec !important;
+    border-bottom: #b6babe 1px solid;
 }
 
 .customSlipApp div:nth-of-type(3) header div:first-of-type {

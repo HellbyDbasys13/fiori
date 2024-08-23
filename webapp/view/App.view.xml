@@ -2,7 +2,8 @@
     controllerName="siar.controller.App"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns:core="sap.ui.core"
-    xmlns="sap.m">
+    xmlns="sap.m"
+    xmlns:tnt="sap.tnt">
     <App>
         <pages>
             <Page class="customPage">
@@ -13,50 +14,14 @@
                     <SplitApp id="splitApp" class="customSlipApp">
                         <masterPages>
                             <Page id="menuPage">
-                                <List id="menuList" items="{/menuItems}" class="customListMenu">
-                                    <StandardListItem title="{title}" icon="{icon}" type="Navigation" press="onMenuItemPress"/>
-                                </List>
+                                <tnt:SideNavigation width="100%" class="customListMenu">
+                                    <tnt:NavigationList id="navigationList" >
+                                    </tnt:NavigationList>
+                                </tnt:SideNavigation>
                             </Page>
                         </masterPages>
                         <detailPages>
-                            <Page id="homePage" title="Home">
-                                <headerContent>
-                                    <Text text="HOME"/>
-                                </headerContent>
-                                <content>
-                                    <HBox class="customContent">
-                                        <VBox>
-                                            <core:Fragment fragmentName="siar.view.fragments.Home" type="XML" class="customContentPage"/>
-                                        </VBox>
-                                    </HBox>
-                                </content>
-                            </Page>
-                            
-                            <Page id="detailPage" title="Detail">
-                                <headerContent>
-                                    <Text text="Detail"/>
-                                </headerContent>
-                                <content>
-                                    <HBox class="customContent">
-                                        <VBox>
-                                            <core:Fragment fragmentName="siar.view.fragments.Detail" type="XML" class="customContentPage" />
-                                        </VBox>
-                                    </HBox>
-                                </content>
-                            </Page>
-                            
-                            <Page id="userPage" title="User">
-                                <headerContent>
-                                    <Text text="User" />
-                                </headerContent>
-                                <content>
-                                    <HBox class="customContent">
-                                        <VBox>
-                                            <core:Fragment fragmentName="siar.view.fragments.User" type="XML" class="customContentPage" />
-                                        </VBox>
-                                    </HBox>
-                                </content>
-                            </Page>
+                            <Page id="Here"></Page>
                         </detailPages>
                     </SplitApp>
                 </content>

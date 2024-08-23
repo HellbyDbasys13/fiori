@@ -1,5 +1,11 @@
 <core:FragmentDefinition
     xmlns="sap.m"
-    xmlns:core="sap.ui.core">
-    <Text text="Contenido de la página Home" />
+    xmlns:core="sap.ui.core"
+    controllerName="siar.controller.fragments.Home">
+    <VBox>
+        <items>
+            <Text text="This dialog is from XML fragment" />
+            <Button text="Clickme" press="onClick" />
+        </items>
+    </VBox>
 </core:FragmentDefinition>

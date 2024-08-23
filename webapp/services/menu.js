@@ -7,7 +7,12 @@ sap.ui.define([
         "use strict";
 
         return {
-            get: async ()=> await HTTP.call(urlMenu, 'GET')
+            get: async ()=> await HTTP.call(urlMenu, 'GET'),
+
+            onClick: function () {
+                // Lógica cuando se hace clic en el botón
+                MessageToast.show("¡Botón Clickme presionado!");
+            }
         };
 
     });

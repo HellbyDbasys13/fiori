@@ -4,8 +4,7 @@
     controllerName="siar.controller.fragments.Home">
     <VBox>
         <items>
-            <Text text="This dialog is from XML fragment" />
-            <Button text="Clickme" press="onClick" />
+            <Text text="Esta es el HOME" />
         </items>
     </VBox>
 </core:FragmentDefinition>

@@ -11,6 +11,7 @@
             <Panel width="auto" class="sapUiResponsiveMargin">
                 <content>
                     <Title level="H1" text="Seguro GMM" />
+                    <core:HTML id="dynamicHtmlContent" />
                 </content>
             </Panel>
         </VBox>

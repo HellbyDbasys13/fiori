@@ -6,14 +6,62 @@
 	xmlns:l="sap.ui.layout"
 	xmlns:f="sap.ui.layout.form"
 	xmlns:tnt="sap.tnt"
+    xmlns:layout="sap.ui.layout"
     >
-        <VBox>
-            <Panel width="auto" class="sapUiResponsiveMargin">
-                <content>
-                    <Title level="H1" text="Seguro GMM" />
-                </content>
-            </Panel>
-        </VBox>
+    <VBox>
+        <Panel
+        headerText="Panel con 10 Campos de Texto en Grid"
+        width="100%"
+        class="sapUiResponsiveMargin"
+        >
+            <content>
+                <layout:Grid
+                    defaultSpan="L3 M6 S12"
+                    hSpacing="1"
+                    vSpacing="1">
+                    
+                        <VBox>
+                            <Label text="Contexto 1" labelFor="inputText1" />
+                            <Input placeholder="Enter text" class="sapUiSmallMarginBottom" />
+                        </VBox>
+
+                        <VBox>
+                            <Label text="Contexto 1" labelFor="inputText1" />
+                            <Input placeholder="Enter text" class="sapUiSmallMarginBottom" />
+                        </VBox>
+
+                        <VBox>
+                            <Label text="Contexto 1" labelFor="inputText1" />
+                            <Input placeholder="Enter text" class="sapUiSmallMarginBottom" />
+                        </VBox>
+
+                        <VBox>
+                            <Label text="Contexto 1" labelFor="inputText1" />
+                            <Input placeholder="Enter text" class="sapUiSmallMarginBottom" />
+                        </VBox>
+
+                        <VBox>
+                            <Label text="Contexto 1" labelFor="inputText1" />
+                            <Input placeholder="Enter text" class="sapUiSmallMarginBottom" />
+                        </VBox>
+
+                        <VBox>
+                            <Label text="Contexto 1" labelFor="inputText1" />
+                            <Input placeholder="Enter text" class="sapUiSmallMarginBottom" />
+                        </VBox>
+
+                        <VBox>
+                            <Label text="Contexto 1" labelFor="inputText1" />
+                            <Input placeholder="Enter text" class="sapUiSmallMarginBottom" />
+                        </VBox>
+                        
+                        
+                    
+
+                </layout:Grid>
+            </content>
+        </Panel>
+    </VBox>
 </core:FragmentDefinition>
 
 

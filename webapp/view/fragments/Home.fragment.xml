@@ -2,9 +2,4 @@
     xmlns="sap.m"
     xmlns:core="sap.ui.core"
     controllerName="siar.controller.fragments.Home">
-    <VBox>
-        <items>
-            <Text text="Esta es el HOME" />
-        </items>
-    </VBox>
 </core:FragmentDefinition>

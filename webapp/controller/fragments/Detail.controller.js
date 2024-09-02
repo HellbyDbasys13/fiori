@@ -10,7 +10,7 @@ sap.ui.define([
   return Controller.extend("siar.controller.fragments.Detail", {
     onInit: function () {
       console.log('DETAIL onInit')
-      
+
     }
 
   });

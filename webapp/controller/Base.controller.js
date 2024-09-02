@@ -1,8 +1,8 @@
 sap.ui.define([
 	"sap/ui/core/mvc/Controller",
 	"sap/ui/core/Fragment",
-	"../services/menu"
-], function (Controller, Fragment, ) {
+	"../utils/DynamicForm"
+], function (Controller, Fragment, DynamicForm) {
 	"use strict";
 
 	return Controller.extend("siar.controller.Base", {
@@ -19,7 +19,10 @@ sap.ui.define([
 			console.log('BASE onAfterRendering')
 			setTimeout(() => {
 				console.clear()
-			}, 5000);
+			}, 1);
+			
+			window.onChangeHandler = this.onChangeHandler.bind(this);
+
 		},
 
 		onExit: function () {
@@ -110,15 +113,21 @@ sap.ui.define([
 				// Agregar el nuevo fragmento
 				oPage.addContent(oFragment);
 
-				// Llamada al método onInit del controlador del fragmento si existe
+				//Llamada al método onInit del controlador del fragmento si existe
 				if (oController && oController.onInit) {
 					oController.onInit();
 				}
 
-				 // Llenar el contenido HTML dinámico
-				 var oHtmlControl = this.byId("dynamicHtmlContent");
-				 var sHtmlContent = this.baseControls();
-				 oHtmlControl.setContent(sHtmlContent);
+				if (sPageId == 'Detail') {
+					DynamicForm.getCustomForm(1,1).then((form)=>{
+						// form.forEach(f=>oPage.addContent(form))
+						
+						for (let index = 0; index < form.length; index++) {
+							const element = form[index];
+							oPage.addContent(element)
+						}
+					})
+				}
 
 				// Navegar a la página de detalle
 				oSplitApp.toDetail(oPage);
@@ -148,76 +157,13 @@ sap.ui.define([
 			return this.byId(sId) || sap.ui.getCore().byId(sId);
 		},
 
-		getIdView:function(){
+		getIdView: function () {
 			return this.getView().getId()
 		},
-		baseControls:function(){
-			let sHtmlContent = `
-				<div class="controles">
-					<div>
-						<label for="empleado">EMPLEADO</label>
-						<input type="text" id="empleado" name="empleado">
-					</div>
-					<div>
-						<label for="nombre">NOMBRE</label>
-						<input type="text" id="nombre" name="nombre">
-					</div>
-					<div>
-						<label for="posicion">POSICIÓN</label>
-						<input type="text" id="posicion" name="posicion">
-					</div>
-					<div>
-						<label for="cia_sa">CIA_SA</label>
-						<input type="text" id="cia_sa" name="cia_sa">
-					</div>
-					<div>
-						<label for="nombrecia">NOMBRE CIA</label>
-						<input type="text" id="nombrecia" name="nombrecia">
-					</div>
-					<div>
-						<label for="funcion">FUNCIÓN</label>
-						<input type="text" id="funcion" name="funcion">
-					</div>
-					<div>
-						<label for="puesto">PUESTO</label>
-						<input type="text" id="puesto" name="puesto">
-					</div>
-					<div>
-						<label for="ccosto">C COSTO</label>
-						<input type="text" id="ccosto" name="ccosto">
-					</div>
-					<div>
-						<label for="fechanacimiento">FECHA NACIMIENTO</label>
-						<input type="date" id="fechanacimiento" name="fechanacimiento">
-					</div>
-					<div>
-						<label for="fechaingreso">FECHA INGRESO</label>
-						<input type="date" id="fechaingreso" name="fechaingreso">
-					</div>
-					<div>
-						<label for="fechaantiguedad">FECHA ANTIGÜEDAD</label>
-						<input type="date" id="fechaantiguedad" name="fechaantiguedad">
-					</div>
-					<div>
-						<label for="agrupador">AGRUPADOR</label>
-						<input type="text" id="agrupador" name="agrupador">
-					</div>
-					<div>
-						<label for="esquema">ESQUEMA</label>
-						<input type="text" id="esquema" name="esquema">
-					</div>
-					<div>
-						<label for="sgmm">SGMM</label>
-						<input type="text" id="sgmm" name="sgmm">
-					</div>
-					<div>
-						<label for="actualizacion">ACTUALIZACIÓN</label>
-						<input type="text" id="actualizacion" name="actualizacion">
-					</div>
-				</div>
-			`;
-
-			return sHtmlContent
+		onChangeHandler:function(event) {
+			var inputId = event.target.id;
+			var newValue = event.target.value;
+			console.log("Input ID: " + inputId + ", New Value: " + newValue);
 		}
 	});
 });

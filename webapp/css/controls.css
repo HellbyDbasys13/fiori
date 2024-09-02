@@ -1,0 +1,128 @@
+/* Estilo base para los divs dentro de .controles */
+.controles {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espacio entre los elementos */
+    max-width: 100%;
+    padding: 10px;
+}
+
+/* Estructura de cada grupo de controles */
+.controles div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+/* Estilo para las etiquetas */
+.controles label {
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Estilo para los inputs (texto y fecha) */
+.controles input[type="text"],
+.controles input[type="date"],
+.controles input[type="number"],
+.controles input[type="email"],
+.controles input[type="password"],
+.controles input[type="tel"],
+.controles input[type="url"],
+.controles input[type="file"],
+.controles input[type="datetime-local"],
+.controles input[type="month"],
+.controles input[type="week"],
+.controles input[type="time"],
+.controles select,
+.controles textarea {
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+/* Efecto al hacer focus en los inputs */
+.controles input[type="text"]:focus,
+.controles input[type="date"]:focus,
+.controles input[type="number"]:focus,
+.controles input[type="email"]:focus,
+.controles input[type="password"]:focus,
+.controles input[type="tel"]:focus,
+.controles input[type="url"]:focus,
+.controles input[type="file"]:focus,
+.controles input[type="datetime-local"]:focus,
+.controles input[type="month"]:focus,
+.controles input[type="week"]:focus,
+.controles input[type="time"]:focus,
+.controles select:focus,
+.controles textarea:focus {
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 5px rgba(128, 189, 255, 0.5);
+}
+
+/* Clases para limitar el ancho de los divs dentro de .controles */
+.controles .col-1 { flex: 0 0 calc(8.33% - 20px); max-width: 8.33%; }
+.controles .col-2 { flex: 0 0 calc(16.66% - 20px); max-width: 16.66%; }
+.controles .col-3 { flex: 0 0 calc(25% - 20px); max-width: 25%; }
+.controles .col-4 { flex: 0 0 calc(33.33% - 20px); max-width: 33.33%; }
+.controles .col-5 { flex: 0 0 calc(41.66% - 20px); max-width: 41.66%; }
+.controles .col-6 { flex: 0 0 calc(50% - 20px); max-width: 50%; }
+.controles .col-7 { flex: 0 0 calc(58.33% - 20px); max-width: 58.33%; }
+.controles .col-8 { flex: 0 0 calc(66.66% - 20px); max-width: 66.66%; }
+.controles .col-9 { flex: 0 0 calc(75% - 20px); max-width: 75%; }
+.controles .col-10 { flex: 0 0 calc(83.33% - 20px); max-width: 83.33%; }
+.controles .col-11 { flex: 0 0 calc(91.66% - 20px); max-width: 91.66%; }
+.controles .col-12 { flex: 0 0 100%; max-width: 100%; }
+
+/* Responsive: Ajuste de columnas en pantallas medianas */
+@media (min-width: 600px) {
+    .controles {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+}
+
+/* Responsive: Ajuste de columnas en pantallas grandes */
+@media (min-width: 900px) {
+    .controles div {
+        flex: 1 1 calc(33.33% - 20px);
+    }
+}
+
+/* Responsive: Ajuste de columnas en pantallas muy grandes */
+@media (min-width: 1200px) {
+    .controles div {
+        flex: 1 1 calc(25% - 20px);
+    }
+}
+
+
+.sapUiResponsiveMargin{
+    width: auto !important;
+}
+
+/* Estilos generales para la tabla */
+.table-custom {
+    /* width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px; */
+    border-radius: 8px; 
+    overflow: hidden !important;
+}
+
+/* Clase para alinear los controles a la izquierda */
+.controles .align-left {
+    align-items: start;
+}
+
+/* Clase para alinear todo el contenido dentro de .controles a la derecha */
+.controles .align-right {
+    align-items: end;
+}

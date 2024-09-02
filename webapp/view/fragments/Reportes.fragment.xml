@@ -1,0 +1,22 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+	xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:tnt="sap.tnt"
+    xmlns:layout="sap.ui.layout"
+    >
+    <VBox>
+        <Panel
+        headerText="REPORTES"
+        width="100%"
+        class="sapUiResponsiveMargin"
+        >
+        <Label text="ESPACIO A FUTURO PARA REPORTES" />
+        </Panel>
+    </VBox>
+</core:FragmentDefinition>
+
+

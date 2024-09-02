@@ -12,7 +12,7 @@ sap.ui.define([
          * @param {sap.ui.core.mvc.Controller} [oController] - El controlador actual (opcional).
          * @returns {sap.ui.core.Control} - El componente encontrado, o null si no se encuentra.
          */
-        getControlById: function (sId, oController) {
+        getControlById: function (sId) {
             var oControl = null;
             var oView, sFragmentId;
 

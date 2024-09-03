@@ -22,7 +22,7 @@ sap.ui.define([
 			}, 1);
 			
 			window.onChangeHandler = this.onChangeHandler.bind(this);
-			window.onChangeHandler = this.onClickGeneric.bind(this);
+			window.onClickGeneric = this.onClickGeneric.bind(this);
 
 		},
 
@@ -166,7 +166,7 @@ sap.ui.define([
 		onClickGeneric:function(event) {
 			var inputId = event.target.id;
 			var newValue = event.target.value;
-			console.log("BTON ID: " + inputId + ", New Value: " + newValue);
+			console.log("BOTON MAMAMLON ID: " + inputId + ", New Value: " + newValue);
 		},
 	});
 });

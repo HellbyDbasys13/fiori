@@ -117,8 +117,7 @@ const createControl = (label, name, type, value, bind = null, size = 0) => {
 
     } else if (type === "button") {
         // controlHtml += `<input type="${type}" id="${name}" name="${name}" value="${label}" onchange="onClickGeneric(event)"/>`;
-        controlHtml += `<span id="__icon1" data-sap-ui="__icon1" data-sap-ui-render="" role="presentation" aria-hidden="true" aria-label="message-popup" data-sap-ui-icon-content="" class="sapUiIcon sapUiIconMirrorInRTL size1 navicon sapMBarChild" style="font-family: SAP-icons;"></span>`;
-
+        controlHtml = `<button class="btn btn-primary" onclick="onClickGeneric(event)">${label}</button>`
     } else {
         controlHtml += `<input type="${type}" id="${name}" name="${name}" onchange="onChangeHandler(event)"${valueAttribute}/>`;
     }

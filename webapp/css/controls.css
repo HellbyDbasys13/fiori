@@ -2,7 +2,8 @@
 .controles {
     display: flex;
     flex-direction: column;
-    gap: 15px; /* Espacio entre los elementos */
+    gap: 15px;
+    /* Espacio entre los elementos */
     max-width: 100%;
     padding: 10px;
 }
@@ -44,6 +45,7 @@
     border: 1px solid #ced4da;
     border-radius: 4px;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    background: #f8f9fa;
 }
 
 /* Efecto al hacer focus en los inputs */
@@ -67,18 +69,65 @@
 }
 
 /* Clases para limitar el ancho de los divs dentro de .controles */
-.controles .col-1 { flex: 0 0 calc(8.33% - 20px); max-width: 8.33%; }
-.controles .col-2 { flex: 0 0 calc(16.66% - 20px); max-width: 16.66%; }
-.controles .col-3 { flex: 0 0 calc(25% - 20px); max-width: 25%; }
-.controles .col-4 { flex: 0 0 calc(33.33% - 20px); max-width: 33.33%; }
-.controles .col-5 { flex: 0 0 calc(41.66% - 20px); max-width: 41.66%; }
-.controles .col-6 { flex: 0 0 calc(50% - 20px); max-width: 50%; }
-.controles .col-7 { flex: 0 0 calc(58.33% - 20px); max-width: 58.33%; }
-.controles .col-8 { flex: 0 0 calc(66.66% - 20px); max-width: 66.66%; }
-.controles .col-9 { flex: 0 0 calc(75% - 20px); max-width: 75%; }
-.controles .col-10 { flex: 0 0 calc(83.33% - 20px); max-width: 83.33%; }
-.controles .col-11 { flex: 0 0 calc(91.66% - 20px); max-width: 91.66%; }
-.controles .col-12 { flex: 0 0 100%; max-width: 100%; }
+.controles .col-1 {
+    flex: 0 0 calc(8.33% - 20px);
+    max-width: 8.33%;
+}
+
+.controles .col-2 {
+    flex: 0 0 calc(16.66% - 20px);
+    max-width: 16.66%;
+}
+
+.controles .col-3 {
+    flex: 0 0 calc(25% - 20px);
+    max-width: 25%;
+}
+
+.controles .col-4 {
+    flex: 0 0 calc(33.33% - 20px);
+    max-width: 33.33%;
+}
+
+.controles .col-5 {
+    flex: 0 0 calc(41.66% - 20px);
+    max-width: 41.66%;
+}
+
+.controles .col-6 {
+    flex: 0 0 calc(50% - 20px);
+    max-width: 50%;
+}
+
+.controles .col-7 {
+    flex: 0 0 calc(58.33% - 20px);
+    max-width: 58.33%;
+}
+
+.controles .col-8 {
+    flex: 0 0 calc(66.66% - 20px);
+    max-width: 66.66%;
+}
+
+.controles .col-9 {
+    flex: 0 0 calc(75% - 20px);
+    max-width: 75%;
+}
+
+.controles .col-10 {
+    flex: 0 0 calc(83.33% - 20px);
+    max-width: 83.33%;
+}
+
+.controles .col-11 {
+    flex: 0 0 calc(91.66% - 20px);
+    max-width: 91.66%;
+}
+
+.controles .col-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
 
 /* Responsive: Ajuste de columnas en pantallas medianas */
 @media (min-width: 600px) {
@@ -104,7 +153,7 @@
 }
 
 
-.sapUiResponsiveMargin{
+.sapUiResponsiveMargin {
     width: auto !important;
 }
 
@@ -113,7 +162,7 @@
     /* width: 100%;
     border-collapse: collapse;
     margin-top: 20px; */
-    border-radius: 8px; 
+    border-radius: 8px;
     overflow: hidden !important;
 }
 
@@ -126,3 +175,437 @@
 .controles .align-right {
     align-items: end;
 }
+
+.customPanel {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 15px;
+    /* Espacio entre los elementos */
+    max-width: 100% !important;
+    padding: 10px !important;
+}
+
+.customPanel div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.customPanel .col-1 {
+    flex: 0 0 calc(8.33% - 20px);
+    max-width: 8.33%;
+}
+
+.customPanel .col-2 {
+    flex: 0 0 calc(16.66% - 20px);
+    max-width: 16.66%;
+}
+
+.customPanel .col-3 {
+    flex: 0 0 calc(25% - 20px);
+    max-width: 25%;
+}
+
+.customPanel .col-4 {
+    flex: 0 0 calc(33.33% - 20px);
+    max-width: 33.33%;
+}
+
+.customPanel .col-5 {
+    flex: 0 0 calc(41.66% - 20px);
+    max-width: 41.66%;
+}
+
+.customPanel .col-6 {
+    flex: 0 0 calc(50% - 20px);
+    max-width: 50%;
+}
+
+.customPanel .col-7 {
+    flex: 0 0 calc(58.33% - 20px);
+    max-width: 58.33%;
+}
+
+.customPanel .col-8 {
+    flex: 0 0 calc(66.66% - 20px);
+    max-width: 66.66%;
+}
+
+.customPanel .col-9 {
+    flex: 0 0 calc(75% - 20px);
+    max-width: 75%;
+}
+
+.customPanel .col-10 {
+    flex: 0 0 calc(83.33% - 20px);
+    max-width: 83.33%;
+}
+
+.customPanel .col-11 {
+    flex: 0 0 calc(91.66% - 20px);
+    max-width: 91.66%;
+}
+
+.customPanel .col-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+
+.centered-table-container {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    background: #f8f9fa;
+    border-radius: 5px;
+    padding-top: 10px;
+}
+
+.centered-table-container img {
+    width: 200px;
+    padding-bottom: 25px;
+}
+
+.centered-table-container span {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    text-align: center;
+    width: 100%;
+
+    font-size: 20px;
+    color: #333;
+}
+
+.icon-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    position: relative;
+}
+
+/* Icono de Documento */
+.icon-document::before {
+    content: "";
+    display: block;
+    width: 70%;
+    height: 80%;
+    background-color: #007bff;
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    border-radius: 4px;
+}
+
+.icon-document::after {
+    content: "";
+    display: block;
+    width: 20%;
+    height: 30%;
+    background-color: #ffffff;
+    position: absolute;
+    top: 10%;
+    left: 60%;
+    transform: rotate(-45deg);
+}
+
+/* Icono de Editar */
+.icon-edit::before {
+    content: "";
+    display: block;
+    width: 70%;
+    height: 20%;
+    background-color: #28a745;
+    position: absolute;
+    bottom: 20%;
+    left: 15%;
+    transform: rotate(-45deg);
+}
+
+.icon-edit::after {
+    content: "";
+    display: block;
+    width: 70%;
+    height: 10%;
+    background-color: #28a745;
+    position: absolute;
+    bottom: 10%;
+    left: 25%;
+    transform: rotate(-45deg);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+/* Icono de Enviar */
+.icon-send::before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 25px 15px 25px;
+    border-color: transparent transparent #dc3545 transparent;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.icon-send::after {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 12px;
+    background-color: #dc3545;
+    position: absolute;
+    top: 12%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Icono de Eliminar */
+.icon-delete::before {
+    content: "";
+    display: block;
+    width: 60%;
+    height: 10%;
+    background-color: #ffc107;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+}
+
+.icon-delete::after {
+    content: "";
+    display: block;
+    width: 60%;
+    height: 60%;
+    background-color: #ffc107;
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    border-radius: 4px;
+}
+
+.icon-delete div {
+    width: 50%;
+    height: 10%;
+    background-color: #ffffff;
+    position: absolute;
+    top: 55%;
+    left: 25%;
+}
+
+.icon-delete div:nth-child(2) {
+    transform: rotate(45deg);
+}
+
+.icon-delete div:nth-child(3) {
+    transform: rotate(-45deg);
+}
+
+.button-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.button {
+    width: 60px;
+    height: 60px;
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.button:hover {
+    background-color: #e0e0e0;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    position: relative;
+}
+
+/* Icono de Documento */
+.icon-document::before {
+    content: "";
+    display: block;
+    width: 70%;
+    height: 80%;
+    background-color: #007bff;
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    border-radius: 4px;
+}
+
+.icon-document::after {
+    content: "";
+    display: block;
+    width: 20%;
+    height: 30%;
+    background-color: #ffffff;
+    position: absolute;
+    top: 10%;
+    left: 60%;
+    transform: rotate(-45deg);
+}
+
+/* Icono de Editar */
+.icon-edit::before {
+    content: "";
+    display: block;
+    width: 70%;
+    height: 20%;
+    background-color: #28a745;
+    position: absolute;
+    bottom: 20%;
+    left: 15%;
+    transform: rotate(-45deg);
+}
+
+.icon-edit::after {
+    content: "";
+    display: block;
+    width: 70%;
+    height: 10%;
+    background-color: #28a745;
+    position: absolute;
+    bottom: 10%;
+    left: 25%;
+    transform: rotate(-45deg);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+/* Icono de Enviar */
+.icon-send::before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 20px 15px 20px;
+    border-color: transparent transparent #dc3545 transparent;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.icon-send::after {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 12px;
+    background-color: #dc3545;
+    position: absolute;
+    top: 12%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Icono de Eliminar */
+.icon-delete::before {
+    content: "";
+    display: block;
+    width: 60%;
+    height: 10%;
+    background-color: #ffc107;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+}
+
+.icon-delete::after {
+    content: "";
+    display: block;
+    width: 60%;
+    height: 60%;
+    background-color: #ffc107;
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    border-radius: 4px;
+}
+
+.icon-delete div {
+    width: 50%;
+    height: 10%;
+    background-color: #ffffff;
+    position: absolute;
+    top: 55%;
+    left: 25%;
+}
+
+.icon-delete div:nth-child(2) {
+    transform: rotate(45deg);
+}
+
+.icon-delete div:nth-child(3) {
+    transform: rotate(-45deg);
+}
+
+/************/
+.button_plus {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background: #fff;
+    cursor: pointer;
+    border: 2px solid #095776;
+    border-radius:50%;
+  
+    /* Mittig */
+    top: 50%;
+    left: 50%;
+  }
+  
+  .button_plus:after {
+    content: '';
+    position: absolute;
+    transform: translate(-50%, -50%);
+    height: 4px;
+    width: 50%;
+    background: #095776;
+    top: 50%;
+    left: 50%;
+  }
+  
+  .button_plus:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #095776;
+    height: 50%;
+    width: 4px;
+  }
+  
+  .button_plus:hover:before,
+  .button_plus:hover:after {
+    background: #fff;
+    transition: 0.2s;
+  }
+  
+  .button_plus:hover {
+    background-color: #095776;
+    transition: 0.2s;
+  }

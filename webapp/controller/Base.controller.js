@@ -22,6 +22,7 @@ sap.ui.define([
 			}, 1);
 			
 			window.onChangeHandler = this.onChangeHandler.bind(this);
+			window.onChangeHandler = this.onClickGeneric.bind(this);
 
 		},
 
@@ -120,15 +121,12 @@ sap.ui.define([
 
 				if (sPageId == 'Detail') {
 					DynamicForm.getCustomForm(1,1).then((form)=>{
-						// form.forEach(f=>oPage.addContent(form))
-						
 						for (let index = 0; index < form.length; index++) {
 							const element = form[index];
 							oPage.addContent(element)
 						}
-					})
+					})					
 				}
-
 				// Navegar a la página de detalle
 				oSplitApp.toDetail(oPage);
 			}.bind(this));
@@ -164,6 +162,11 @@ sap.ui.define([
 			var inputId = event.target.id;
 			var newValue = event.target.value;
 			console.log("Input ID: " + inputId + ", New Value: " + newValue);
-		}
+		},
+		onClickGeneric:function(event) {
+			var inputId = event.target.id;
+			var newValue = event.target.value;
+			console.log("BTON ID: " + inputId + ", New Value: " + newValue);
+		},
 	});
 });

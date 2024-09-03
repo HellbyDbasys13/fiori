@@ -21,19 +21,14 @@ sap.ui.define([
                 })
                 var oPanel = new sap.m.Panel({
                     expanded: true,
+                    with: '90px',
                     content: [
                         dynamicForm
                     ]
                 });
 
                 oPanel.addStyleClass("sapUiResponsiveMargin");
-                oPanel.addStyleClass("customPanel");
 
-
-                let oHTMLControl = new sap.ui.core.HTML({
-                    content: oPanel
-                })
-                
                 newForm.push(oPanel)
             });
 
@@ -83,9 +78,52 @@ const createControl = (label, name, type, value, bind = null, size = 0) => {
         tableHTML += '</tr></tbody></table>';
 
         controlHtml += tableHTML
+    } else if (type === "download") {
+
+        var sTableHTML = '<div class="centered-table-container">';
+        sTableHTML += '<table style="border-collapse: collapse;">';
+        sTableHTML += '<tbody>';
+
+        // 3. Iterar sobre los archivos y generar las filas y celdas
+        for (var i = 0; i < bind.length; i++) {
+            if (i % 4 === 0) {  // Crear una nueva fila cada 4 archivos
+                sTableHTML += '<tr>';
+            }
+
+            sTableHTML += '<td style="padding: 10px; text-align: center;">';
+            sTableHTML += '<div style="position: relative; display: inline-block; text-align: center;">';
+            sTableHTML += '<a href="' + bind[i].url + '" download="' + bind[i].name + '" style="text-decoration: none;">';
+            sTableHTML += '<img src="https://w7.pngwing.com/pngs/182/22/png-transparent-computer-icons-pdf-filename-extension-pdf-icon-angle-text-rectangle-thumbnail.png" class="size2 navicon" style="width: 48px; height: 48px;" />';
+            sTableHTML += '</a>';
+            sTableHTML += '<span>';
+            sTableHTML += bind[i].name;
+            sTableHTML += '</span>';
+            sTableHTML += '</div>';
+            sTableHTML += '</td>';
+
+            if (i % 4 === 3 || i === bind.length - 1) {  // Cerrar la fila después de 4 archivos o al final
+                sTableHTML += '</tr>';
+            }
+
+
+            // https://w7.pngwing.com/pngs/182/22/png-transparent-computer-icons-pdf-filename-extension-pdf-icon-angle-text-rectangle-thumbnail.png
+        }
+
+        sTableHTML += '</tbody>';
+        sTableHTML += '</table>';
+        sTableHTML += '</div>';
+
+        controlHtml += sTableHTML
+
+    } else if (type === "button") {
+        // controlHtml += `<input type="${type}" id="${name}" name="${name}" value="${label}" onchange="onClickGeneric(event)"/>`;
+        controlHtml += `<span id="__icon1" data-sap-ui="__icon1" data-sap-ui-render="" role="presentation" aria-hidden="true" aria-label="message-popup" data-sap-ui-icon-content="" class="sapUiIcon sapUiIconMirrorInRTL size1 navicon sapMBarChild" style="font-family: SAP-icons;"></span>`;
+
     } else {
         controlHtml += `<input type="${type}" id="${name}" name="${name}" onchange="onChangeHandler(event)"${valueAttribute}/>`;
     }
+
+
 
     return `<div ${(size && size > 0 ? `class="col-${size}"` : '')}>${controlHtml}</div>`;
 }

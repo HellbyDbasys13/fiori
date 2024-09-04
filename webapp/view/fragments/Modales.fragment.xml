@@ -1,0 +1,172 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+	xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:tnt="sap.tnt"
+    controllerName="siar.controller.fragments.Modales"
+    >
+    
+<!--Ventana modal de formulario-->
+     <Dialog
+        id="formDialog"
+        title="Datos del dependiente"
+        icon=""
+        class="sapUiResponsivePadding dialogPerson"
+        draggable="true">
+        <content>
+            <VBox class="sapUiSmallMargin contentFormEdit">
+
+                <HBox class="contentInputs">
+                    <VBox >
+                        <Label text="Nombre:" />
+                        <Input class="styleInput" id="nombre" />
+                    </VBox>
+                    <VBox >
+                        <Label text="Apellido Paterno:" />
+                        <Input class="styleInput" id="apellidoPat" />
+                    
+                    </VBox>
+                    <VBox >
+                        <Label text="Apellido Materno:" />
+                        <Input class="styleInput" id="apellidoMat" />
+                    
+                    </VBox>
+                </HBox>
+                <HBox class="contentInputs">
+                    <VBox >
+                        <Label text="Fecha de nacimiento:" />
+                        <DatePicker class="styleInput" id="fecha"
+                                    placeholder="Ingrese su fecha de nacimiento" />
+                    
+                    </VBox>
+                    <VBox >
+                        <Label text="Género:" />
+                        <Select class="styleInput" id="genero">
+                            <items>
+                                <core:Item key="selecciona" text="Selecciona una opción"  />
+                                <core:Item key="hombre" text="Hombre" />
+                                <core:Item key="mujer" text="Mujer" />
+                                <core:Item key="otro" text="Otro" />
+                            </items>
+                        </Select>
+                    </VBox>
+
+                    <VBox >
+                        <Label text="Parentesco:" />
+                        <Select class="styleInput" id="parent">
+                            <items>
+                                <core:Item key="selecciona" text="Selecciona una opción"  />
+                                <core:Item key="conyuge" text="Cónyuge" />
+                                <core:Item key="hijo" text="Hijo" />
+                                <core:Item key="hija" text="Hija" />
+                            </items>
+                        </Select>
+                    </VBox>
+
+                </HBox>
+                <Label text="Comentarios:" />
+                <HBox class="contentUploadDep">
+                    <TextArea class="textComments" id="comentarios" rows="7" cols="30"></TextArea>
+                    
+                    <VBox class="fileDropArea">
+
+                        <u:FileUploader
+                            id="fileUploaderDep"
+                            uploadUrl=""
+                            fileType="pdf"
+                            name="fileUploader"
+                            change="onFileChange"/>
+
+                        <core:Icon class="iconUpload" src="sap-icon://upload" size="3rem"></core:Icon>
+                    </VBox>
+                    <VBox class="contentFile">
+                        <Text
+                            class="textFile"
+                            id="fileName"
+                            text="Archivo no seleccionado"/>
+                    
+                    </VBox>
+                </HBox>
+                <VBox class="alignBtn">
+                    <Button text="Enviar datos" class="card-button" press="onSubmitForm" />
+                
+                </VBox>
+            </VBox>
+        </content>
+        <endButton>
+            <Button class="btnClose" text="Cerrar" press="onCloseDialog" />
+        </endButton>
+    </Dialog>
+
+    <!--Ventana modal de envio de correo-->
+    <Dialog
+        id="formDialogEmail"
+        title="Enviar póliza."
+        class="sapUiResponsivePadding modalEnvioEmail"
+        draggable="true">
+        <content>
+            
+            <Text id="errorMessage" text="" visible="false" class="error" />
+            <HBox class="sapUiSmallMargin contentEmail">
+                <VBox >
+                    <Label text="Correo:" />
+                    <Input class="styleInput" id="emailInput" type="Email" value="{/email}" required="true" />
+                
+                </VBox>
+
+                <VBox >
+                    <Label text="Confirma tu correo:" />
+                    <Input class="styleInput" id="confirmEmailInput" type="Email" value="{/confirmEmail}" required="true"/>
+                
+                </VBox>
+            </HBox>
+            <VBox class="alignBtn">
+                <Button text="Enviar correo" class="card-button" press="onSubmitEmail" />
+            
+            </VBox>
+        </content>
+        <endButton>
+            <Button text="Cerrar" press="onCloseDialogEmail" />
+        </endButton>
+
+    </Dialog>
+
+    <!--Ventana modal del Carga de archivos-->
+     <Dialog
+        id="formDialogUpload"
+        title="Cargar Documentos"
+        class="sapUiResponsivePadding modalDocuments"
+        draggable="true">
+        <content>
+            <Label  text="Adjuntar archivo PDF:" />
+            <VBox   id="fileDropArea"
+                    class="fileDropArea"
+                    width="100%"
+                    height="150px"
+                    alignItems="Center"
+                    justifyContent="Center">
+
+                <u:FileUploader
+                        id="fileUploader"
+                        uploadUrl=""
+                        fileType="pdf"
+                        change="onFileChange"/>
+
+                <core:Icon class="iconUpload" src="sap-icon://upload" size="3rem"></core:Icon>
+            </VBox>
+            <VBox class="alignBtn">
+            
+                <Button class="card-button" text="Adjuntar" press="onAttachFile" />
+            </VBox>
+        </content>
+        <endButton>
+            <Button text="Cerrar" press="onCloseDialogUpload" />
+        </endButton>
+    </Dialog>
+
+</core:FragmentDefinition>
+
+

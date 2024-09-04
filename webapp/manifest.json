@@ -65,6 +65,14 @@
           "uri": "css/style.css"
         },{
           "uri": "css/controls.css"
+        },
+        {
+          "uri": "css/cards.css"
+        }
+      ],
+      "js": [
+        {
+          "uri": "model/data.json"
         }
       ]
     },

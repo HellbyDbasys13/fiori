@@ -1,0 +1,25 @@
+{
+    "cards": [
+        {
+            "id": "card1",
+            "title": "Seguro de gastos médicos mayores",
+            "content": "Revisa el resumen de tu póliza de SGMM.",
+            "buttonText": "Ver detalles",
+            "imageSrc": "view/Images/insurance-svgrepo-com (2).png"
+        },
+        {
+            "id": "card2",
+            "title": "Seguro de Vida",
+            "content": "Revisa el resumen de tu póliza de seguro de vida.",
+            "buttonText": "Ver detalles",
+            "imageSrc": "view/Images/health-insurance-medical-medical-svgrepo-com (1).png"
+        },
+        {
+            "id": "card3",
+            "title": "Todo riesgo",
+            "content": "Revisa el resumen de tu póliza de todo riesgo",
+            "buttonText": "Ver detalles",
+            "imageSrc": "view/Images/caution-svgrepo-com.png"
+        }
+    ]
+}

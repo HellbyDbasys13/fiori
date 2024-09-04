@@ -2,29 +2,46 @@
     xmlns="sap.m"
     xmlns:core="sap.ui.core">
 
-    <Page title="Dynamic Cards">
-        <content>
-            <VBox id="cardContainer" class="sapUiSmallMargin">
-                <items>
-                    <List
-                        items="{/cards}">
-                        <items>
-                            <CustomListItem>
-                                <VBox>
-                                    <Panel
-                                        headerText="{title}">
-                                        <content>
-                                            <Image src="{imageSrc}" width="100px" height="100px"/>
-                                            <Text text="{content}" />
-                                            <Button text="{buttonText}" press="onButtonPress"/>
-                                        </content>
-                                    </Panel>
-                                </VBox>
-                            </CustomListItem>
-                        </items>
-                    </List>
-                </items>
-            </VBox>
-        </content>
-    </Page>
+    <HBox id="container" class="container">
+
+
+
+        <VBox class="card-container" id="card" >
+            <Image
+                id="PolizaSgmm"
+                src="{cardModel>/cards/0/imageSrc}"
+                class="card-image"
+                width="100px"
+                height="100px"
+                decorative="true" />
+            <Text class="card-title" id="titleCard" text="{cardModel>/cards/0/title}"  />
+            <Text class="card-content" id="textCard" text="{cardModel>/cards/0/content}" />
+            <Button class="card-button" id="btnCard" text="{cardModel>/cards/0/buttonText}" press="onOpenDialogEmail"/>
+        </VBox>
+        <VBox class="card-container" id="card1">
+            <Image
+                id="PolizaSgmm1"
+                src="{cardModel>/cards/1/imageSrc}"
+                class="card-image"
+                width="100px"
+                height="100px"
+                decorative="true" />
+            <Text class="card-title" id="titleCard1" text="{cardModel>/cards/1/title}"   />
+            <Text class="card-content" id="textCard1" text="{cardModel>/cards/1/content}" />
+            <Button class="card-button" id="btnCard1" text="{cardModel>/cards/1/buttonText}" press="onOpenDialogUpload"/>
+        </VBox>
+
+        <VBox class="card-container" id="card2">
+            <Image
+                id="PolizaSgmm2"
+                src="{cardModel>/cards/2/imageSrc}"
+                class="card-image"
+                width="100px"
+                height="100px"
+                decorative="true" />
+            <Text class="card-title" id="titleCard2" text="{cardModel>/cards/2/title}"   />
+            <Text class="card-content" id="textCard2" text="{cardModel>/cards/2/content}" />
+            <Button class="card-button" id="btnCard2" text="{cardModel>/cards/2/buttonText}" press="onOpenDialog"/>
+        </VBox>
+    </HBox>
 </core:FragmentDefinition>

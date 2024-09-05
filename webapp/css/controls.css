@@ -609,3 +609,14 @@
     background-color: #095776;
     transition: 0.2s;
   }
+
+.button-icon{
+    padding: 10px 10px 10px 10px;
+}
+
+.downloadContainer{
+    border-radius: 4px;
+    background: #ececec;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}

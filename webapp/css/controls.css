@@ -152,7 +152,6 @@
     }
 }
 
-
 .sapUiResponsiveMargin {
     width: auto !important;
 }
@@ -251,7 +250,6 @@
     max-width: 100%;
 }
 
-
 .centered-table-container {
     display: flex;
     justify-content: center;
@@ -271,242 +269,294 @@
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-
     text-align: center;
     width: 100%;
-
     font-size: 20px;
     color: #333;
 }
 
-/****************************************************/
-/* Estilos para botones */
-.btn {
-    width: 100%;
-    display: inline-block;
-    font-weight: 400;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    user-select: none;
-    border: 1px solid transparent;
-    margin: 19px 15px;
-    line-height: 1.5;
-    border-radius: 50px;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-    padding: 5px 5px 5px 5px;
+.icon-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 50px;
 }
 
-/* Botones primarios */
-.btn-primary {
-    color: #fff;
+.icon {
+    width: 50px;
+    height: 50px;
+    position: relative;
+}
+
+/* Icono de Documento */
+.icon-document::before {
+    content: "";
+    display: block;
+    width: 70%;
+    height: 80%;
     background-color: #007bff;
-    border-color: #007bff;
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    border-radius: 4px;
 }
 
-.btn-primary:hover {
-    color: #fff;
-    background-color: #0056b3;
-    border-color: #004085;
+.icon-document::after {
+    content: "";
+    display: block;
+    width: 20%;
+    height: 30%;
+    background-color: #ffffff;
+    position: absolute;
+    top: 10%;
+    left: 60%;
+    transform: rotate(-45deg);
 }
 
-.btn-primary:focus,
-.btn-primary.focus {
-    color: #fff;
-    background-color: #0056b3;
-    border-color: #004085;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+/* Icono de Editar */
+.icon-edit::before {
+    content: "";
+    display: block;
+    width: 70%;
+    height: 20%;
+    background-color: #28a745;
+    position: absolute;
+    bottom: 20%;
+    left: 15%;
+    transform: rotate(-45deg);
 }
 
-.btn-primary:disabled {
-    color: #fff;
+.icon-edit::after {
+    content: "";
+    display: block;
+    width: 70%;
+    height: 10%;
+    background-color: #28a745;
+    position: absolute;
+    bottom: 10%;
+    left: 25%;
+    transform: rotate(-45deg);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+/* Icono de Enviar */
+.icon-send::before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 25px 15px 25px;
+    border-color: transparent transparent #dc3545 transparent;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.icon-send::after {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 12px;
+    background-color: #dc3545;
+    position: absolute;
+    top: 12%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Icono de Eliminar */
+.icon-delete::before {
+    content: "";
+    display: block;
+    width: 60%;
+    height: 10%;
+    background-color: #ffc107;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+}
+
+.icon-delete::after {
+    content: "";
+    display: block;
+    width: 60%;
+    height: 60%;
+    background-color: #ffc107;
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    border-radius: 4px;
+}
+
+.icon-delete div {
+    width: 50%;
+    height: 10%;
+    background-color: #ffffff;
+    position: absolute;
+    top: 55%;
+    left: 25%;
+}
+
+.icon-delete div:nth-child(2) {
+    transform: rotate(45deg);
+}
+
+.icon-delete div:nth-child(3) {
+    transform: rotate(-45deg);
+}
+
+.button-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.button {
+    width: 60px;
+    height: 60px;
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.button:hover {
+    background-color: #e0e0e0;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    position: relative;
+}
+
+/* Icono de Documento */
+.icon-document::before {
+    content: "";
+    display: block;
+    width: 70%;
+    height: 80%;
     background-color: #007bff;
-    border-color: #007bff;
-    opacity: 0.65;
-    cursor: not-allowed;
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    border-radius: 4px;
 }
 
-/* Botones secundarios */
-.btn-secondary {
-    color: #fff;
-    background-color: #6c757d;
-    border-color: #6c757d;
+.icon-document::after {
+    content: "";
+    display: block;
+    width: 20%;
+    height: 30%;
+    background-color: #ffffff;
+    position: absolute;
+    top: 10%;
+    left: 60%;
+    transform: rotate(-45deg);
 }
 
-.btn-secondary:hover {
-    color: #fff;
-    background-color: #5a6268;
-    border-color: #545b62;
-}
-
-.btn-secondary:focus,
-.btn-secondary.focus {
-    color: #fff;
-    background-color: #5a6268;
-    border-color: #545b62;
-    box-shadow: 0 0 5px rgba(108, 117, 125, 0.5);
-}
-
-.btn-secondary:disabled {
-    color: #fff;
-    background-color: #6c757d;
-    border-color: #6c757d;
-    opacity: 0.65;
-    cursor: not-allowed;
-}
-
-/* Botones de éxito */
-.btn-success {
-    color: #fff;
+/* Icono de Editar */
+.icon-edit::before {
+    content: "";
+    display: block;
+    width: 70%;
+    height: 20%;
     background-color: #28a745;
-    border-color: #28a745;
+    position: absolute;
+    bottom: 20%;
+    left: 15%;
+    transform: rotate(-45deg);
 }
 
-.btn-success:hover {
-    color: #fff;
-    background-color: #218838;
-    border-color: #1e7e34;
-}
-
-.btn-success:focus,
-.btn-success.focus {
-    color: #fff;
-    background-color: #218838;
-    border-color: #1e7e34;
-    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
-}
-
-.btn-success:disabled {
-    color: #fff;
+.icon-edit::after {
+    content: "";
+    display: block;
+    width: 70%;
+    height: 10%;
     background-color: #28a745;
-    border-color: #28a745;
-    opacity: 0.65;
-    cursor: not-allowed;
+    position: absolute;
+    bottom: 10%;
+    left: 25%;
+    transform: rotate(-45deg);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 
-/* Botones de peligro */
-.btn-danger {
-    color: #fff;
+/* Icono de Enviar */
+.icon-send::before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 20px 15px 20px;
+    border-color: transparent transparent #dc3545 transparent;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.icon-send::after {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 12px;
     background-color: #dc3545;
-    border-color: #dc3545;
+    position: absolute;
+    top: 12%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-.btn-danger:hover {
-    color: #fff;
-    background-color: #c82333;
-    border-color: #bd2130;
-}
-
-.btn-danger:focus,
-.btn-danger.focus {
-    color: #fff;
-    background-color: #c82333;
-    border-color: #bd2130;
-    box-shadow: 0 0 5px rgba(220, 53, 69, 0.5);
-}
-
-.btn-danger:disabled {
-    color: #fff;
-    background-color: #dc3545;
-    border-color: #dc3545;
-    opacity: 0.65;
-    cursor: not-allowed;
-}
-
-/* Botones de advertencia */
-.btn-warning {
-    color: #212529;
+/* Icono de Eliminar */
+.icon-delete::before {
+    content: "";
+    display: block;
+    width: 60%;
+    height: 10%;
     background-color: #ffc107;
-    border-color: #ffc107;
+    position: absolute;
+    top: 20%;
+    left: 20%;
 }
 
-.btn-warning:hover {
-    color: #212529;
-    background-color: #e0a800;
-    border-color: #d39e00;
-}
-
-.btn-warning:focus,
-.btn-warning.focus {
-    color: #212529;
-    background-color: #e0a800;
-    border-color: #d39e00;
-    box-shadow: 0 0 5px rgba(255, 193, 7, 0.5);
-}
-
-.btn-warning:disabled {
-    color: #212529;
+.icon-delete::after {
+    content: "";
+    display: block;
+    width: 60%;
+    height: 60%;
     background-color: #ffc107;
-    border-color: #ffc107;
-    opacity: 0.65;
-    cursor: not-allowed;
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    border-radius: 4px;
 }
 
-/* Botones de información */
-.btn-info {
-    color: #fff;
-    background-color: #17a2b8;
-    border-color: #17a2b8;
+.icon-delete div {
+    width: 50%;
+    height: 10%;
+    background-color: #ffffff;
+    position: absolute;
+    top: 55%;
+    left: 25%;
 }
 
-.btn-info:hover {
-    color: #fff;
-    background-color: #138496;
-    border-color: #117a8b;
+.icon-delete div:nth-child(2) {
+    transform: rotate(45deg);
 }
 
-.btn-info:focus,
-.btn-info.focus {
-    color: #fff;
-    background-color: #138496;
-    border-color: #117a8b;
-    box-shadow: 0 0 5px rgba(23, 162, 184, 0.5);
+.icon-delete div:nth-child(3) {
+    transform: rotate(-45deg);
 }
-
-.btn-info:disabled {
-    color: #fff;
-    background-color: #17a2b8;
-    border-color: #17a2b8;
-    opacity: 0.65;
-    cursor: not-allowed;
-}
-
-/* Botones de luz */
-.btn-light {
-    color: #212529;
-    background-color: #f8f9fa;
-    border-color: #f8f9fa;
-}
-
-.btn-light:hover {
-    color: #212529;
-    background-color: #e2e6ea;
-    border-color: #dae0e5;
-}
-
-.btn-light:focus,
-.btn-light.focus {
-    color: #212529;
-    background-color: #e2e6ea;
-    border-color: #dae0e5;
-    box-shadow: 0 0 5px rgba(248, 249, 250, 0.5);
-}
-
-.btn-light:disabled {
-    color: #212529;
-    background-color: #f8f9fa;
-    border-color: #f8f9fa;
-    opacity: 0.65;
-    cursor: not-allowed;
-}
-
-/* Botones oscuros */
-.btn-dark {
-    color: #fff;
-    background-color: #343a40;
-    border-color: #343a40;
-}
-
 
 /************/
 .button_plus {
@@ -516,14 +566,14 @@
     background: #fff;
     cursor: pointer;
     border: 2px solid #095776;
-    border-radius:50%;
-  
+    border-radius: 50%;
+
     /* Mittig */
     top: 50%;
     left: 50%;
-  }
-  
-  .button_plus:after {
+}
+
+.button_plus:after {
     content: '';
     position: absolute;
     transform: translate(-50%, -50%);
@@ -532,9 +582,9 @@
     background: #095776;
     top: 50%;
     left: 50%;
-  }
-  
-  .button_plus:before {
+}
+
+.button_plus:before {
     content: '';
     position: absolute;
     top: 50%;
@@ -543,47 +593,27 @@
     background: #095776;
     height: 50%;
     width: 4px;
-  }
-  
-  .button_plus:hover:before,
-  .button_plus:hover:after {
+}
+
+.button_plus:hover:before,
+.button_plus:hover:after {
     background: #fff;
     transition: 0.2s;
-  }
-  
-  .button_plus:hover {
+}
+
+.button_plus:hover {
     background-color: #095776;
     transition: 0.2s;
-  }
+}
 
-.button-icon{
+
+.button-icon {
     padding: 10px 10px 10px 10px;
 }
 
-.downloadContainer{
+.downloadContainer {
     border-radius: 4px;
     background: #ececec;
     padding-top: 15px;
     padding-bottom: 15px;
-=======
-.btn-dark:hover {
-    color: #fff;
-    background-color: #23272b;
-    border-color: #1d2124;
-}
-
-.btn-dark:focus,
-.btn-dark.focus {
-    color: #fff;
-    background-color: #23272b;
-    border-color: #1d2124;
-    box-shadow: 0 0 5px rgba(52, 58, 64, 0.5);
-}
-
-.btn-dark:disabled {
-    color: #fff;
-    background-color: #343a40;
-    border-color: #343a40;
-    opacity: 0.65;
-    cursor: not-allowed;
 }
